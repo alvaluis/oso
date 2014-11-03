@@ -2,9 +2,6 @@
 #include <stdio.h>
 #include "colores.h"
 
-// http://stackoverflow.com/questions/3219393/stdlib-and-colored-output-in-c
-// http://ascii-table.com/ansi-escape-sequences.php
-
 /*
  * Dado un color -1Default 0Red 1Green 2Yellow 3Blue 4Magenta 5Cyan
  * Hace que el terminal a partir de ahora escriba en ese color
