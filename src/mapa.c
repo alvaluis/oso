@@ -44,7 +44,7 @@ void inicializar_mapa(t_mapa *mapa) {
 void imprimir_mapa(t_mapa mapa) {
     int i, j;
     t_casilla casilla;
-    
+
     printf("  |");
     for (i = 0; i < mapa.num_cols; i++)
         printf("%d|", i / 10);
@@ -85,7 +85,7 @@ int calcular_osos(t_mapa *mapa, int f, int c, char car) {
     int osos = 0;
 
     if (car == 'S') {
-        if (hay_un_oso(mapa, c, f, -1,  0, car)) osos++; 
+        if (hay_un_oso(mapa, c, f, -1,  0, car)) osos++;
         if (hay_un_oso(mapa, c, f, -1, -1, car)) osos++;
         if (hay_un_oso(mapa, c, f,  0, -1, car)) osos++;
         if (hay_un_oso(mapa, c, f, +1, -1, car)) osos++;
@@ -115,9 +115,9 @@ int calcular_osos(t_mapa *mapa, int f, int c, char car) {
  **/
 int hay_un_oso(t_mapa *mapa, int c, int f, int dc, int df, char car) {
     int w = mapa->num_cols, h = mapa->num_filas;
-    
+
     if (car == 'S') {
-        if (c+dc >= 0 && c+dc < w && f+df >= 0 && f+df < h && 
+        if (c+dc >= 0 && c+dc < w && f+df >= 0 && f+df < h &&
             c-dc >= 0 && c-dc < w && f-df >= 0 && f-df < h &&
             mapa->c[f+df][c+dc].letra == 'O' && mapa->c[f-df][c-dc].letra == 'O')
             return 1;
@@ -125,11 +125,13 @@ int hay_un_oso(t_mapa *mapa, int c, int f, int dc, int df, char car) {
             return 0;
     }
     else if (car == 'O') {
-        if (c+2*dc >= 0 && c+2*dc < w && f+2*df >= 0 && f+2*df < h && 
+        if (c+2*dc >= 0 && c+2*dc < w && f+2*df >= 0 && f+2*df < h &&
             mapa->c[f+df][c+dc].letra == 'S' && mapa->c[f+2*df][c+2*dc].letra == 'O')
             return 1;
         else
             return 0;
     }
-    else return 0;
+
+    return 0;
 }
+

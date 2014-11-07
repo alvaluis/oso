@@ -1,5 +1,5 @@
 #ifndef JUGADORES_H
-#define	JUGADORES_H
+#define JUGADORES_H
 
 #define MIN_JUGADORES	2
 #define MAX_JUGADORES	6
@@ -53,5 +53,5 @@ void imprimir_jugador(int j);
  */
 void imprimir_contadores(t_jugadores js);
 
-#endif	/* JUGADORES_H */
+#endif /* JUGADORES_H */
 

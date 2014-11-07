@@ -1,5 +1,5 @@
 #ifndef COLORS_H
-#define	COLORS_H
+#define COLORS_H
 
 #define ANSI_COLOR_BLACK   "\x1b[30m"
 #define ANSI_COLOR_RED     "\x1b[31m"
@@ -14,5 +14,5 @@
 void printf_color(int color);
 void printf_reset_color();
 
-#endif	/* COLORS_H */
+#endif /* COLORS_H */
 

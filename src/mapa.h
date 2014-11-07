@@ -1,5 +1,5 @@
 #ifndef MAPA_H
-#define	MAPA_H
+#define MAPA_H
 
 #define MIN_FILAS	 3
 #define MIN_COLS	 3
@@ -74,5 +74,5 @@ int calcular_osos(t_mapa *mapa, int f, int c, char car);
  **/
 int hay_un_oso(t_mapa *mapa, int c, int f, int dc, int df, char car);
 
-#endif	/* MAPA_H */
+#endif /* MAPA_H */
 
