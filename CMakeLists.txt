@@ -9,6 +9,7 @@ add_executable (
   src/azar.c
   src/colores.c
   src/duerme.c
+  src/input.c
   src/jugadores.c
   src/mapa.c
 )
