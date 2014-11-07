@@ -1,4 +1,3 @@
-// Este fichero se le da al alumno
 #include <time.h>
 #include "duerme.h"
 

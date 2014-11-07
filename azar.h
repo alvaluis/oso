@@ -1,4 +1,4 @@
-#ifndef AZAR_H 
+#ifndef AZAR_H
 #define	AZAR_H
 
 void inicializar_azar();

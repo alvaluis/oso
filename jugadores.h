@@ -1,4 +1,4 @@
-#ifndef JUGADORES_H 
+#ifndef JUGADORES_H
 #define	JUGADORES_H
 
 #define MIN_JUGADORES	2

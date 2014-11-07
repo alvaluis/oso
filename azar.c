@@ -1,4 +1,3 @@
-// Este fichero se le da al alumno
 #include <time.h>	// time()
 #include <stdlib.h>	// rand(), srand()
 #include <stdio.h>	// printf()
