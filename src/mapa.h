@@ -61,5 +61,18 @@ void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car);
  */
 int calcular_osos(t_mapa *mapa, int f, int c, char car);
 
+/**
+ * Comprueba si se crearía un OSO, en la dirección marcada por dc y df, al poner
+ * el caracter car en la casilla (c,f).
+ * @param mapa el mapa
+ * @param c la columna de la casilla donde se pone car
+ * @param f la fila de la casilla donde se pone car
+ * @param dc dirección horizontal en la que miramos si hay un OSO
+ * @param df dirección vertical en la que miramos si hay un OSO
+ * @param car la letra que pondríamos en la casilla
+ * @return 1 si se crea OSO, 0 en cualquier otro caso
+ **/
+int hay_un_oso(t_mapa *mapa, int c, int f, int dc, int df, char car);
+
 #endif	/* MAPA_H */
 

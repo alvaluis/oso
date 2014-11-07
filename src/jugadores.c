@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "colores.h"
 #include "jugadores.h"
+#include "input.h"
 
 /*
  * void inicializar_jugadores(t_jugadores *js);
@@ -11,21 +12,19 @@
  */
 void inicializar_jugadores(t_jugadores *js) {
     int i;
-    printf("Numero total de jugadores (2-6): ");
-    scanf("%d", &(*js).num_jugadores);
-    if ((*js).num_jugadores >= MIN_JUGADORES && (*js).num_jugadores <= MAX_JUGADORES) {
-        printf("Numero de jugadores humanos (0-%d): ", (*js).num_jugadores);
-        scanf("%d", &(*js).num_humanos);
-        if ((*js).num_humanos >= MIN_HUMANOS && (*js).num_humanos <= (*js).num_jugadores) {
-            (*js).turno = 0;
-            for (i = 0; i < (*js).num_jugadores; i++)
-                (*js).j[i].num_osos = 0;
-            for (i = 0; i < (*js).num_humanos; i++)
-                (*js).j[i].tipo = JUGADOR_HUMANO;
-            for (i = (*js).num_humanos; i < (*js).num_jugadores; i++)
-                (*js).j[i].tipo = JUGADOR_MAQUINA;
-        }
-    }
+
+    js->num_jugadores = pedir_campo("Numero de jugadores", 2, 6);
+    js->num_humanos = pedir_campo("Numero de jugadores humanos", 0, js->num_jugadores);
+            
+    js->turno = 0;
+    for (i = 0; i < js->num_jugadores; i++)
+        js->j[i].num_osos = 0;
+    for (i = 0; i < js->num_humanos; i++)
+        js->j[i].tipo = JUGADOR_HUMANO;
+    for (i = js->num_humanos; i < js->num_jugadores; i++)
+        js->j[i].tipo = JUGADOR_MAQUINA;
+
+    
 }
 
 /*
