@@ -1,9 +1,6 @@
 #ifndef MAPA_H
 #define	MAPA_H
 
-#define TRUE	 1
-#define FALSE	 0
-
 #define MIN_FILAS	 3
 #define MIN_COLS	 3
 #define MAX_FILAS	15

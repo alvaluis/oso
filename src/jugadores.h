@@ -6,12 +6,14 @@
 #define MIN_HUMANOS	0
 #define MAX_HUMANOS	MAX_JUGADORES
 
-#define JUGADOR_MAQUINA	0
-#define JUGADOR_HUMANO	1
+typedef enum {
+    JUGADOR_MAQUINA,
+    JUGADOR_HUMANO
+} t_jugador_tipo;
 
 typedef struct {
     int num_osos;
-    int tipo; // JUGADOR_MAQUINA o JUGADOR_HUMANO
+    t_jugador_tipo tipo;
 } t_jugador;
 
 typedef struct {
