@@ -62,7 +62,7 @@ void realizar_jugada(t_mapa *mapa, t_jugadores *js) {
  * - Imprime el estado del juego.
  */
 
-main() {
+int main() {
   /* COMPLETAR */
 }
 
