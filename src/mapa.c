@@ -31,8 +31,8 @@ void inicializar_casillas(t_mapa *mapa) {
  */
 void inicializar_mapa(t_mapa *mapa) {
     printf("Mapa:\n");
-    mapa->num_filas = pedir_campo("Filas", 3, 15);
-    mapa->num_cols = pedir_campo("Columnas", 3, 35);
+    mapa->num_filas = pedir_entero("Filas", 3, 15);
+    mapa->num_cols = pedir_entero("Columnas", 3, 35);
     inicializar_casillas(mapa);
 }
 

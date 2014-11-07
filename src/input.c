@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include "input.h"
 
-int pedir_campo(const char *nombre, int min, int max) {
+/**
+ * Pide un entero al usuario, hasta que este introduce
+ * un valor válido (entre min y max).
+ **/
+int pedir_entero(const char *nombre, int min, int max) {
     int n;
     while (1) {
         printf("%s (%d-%d): ", nombre, min, max);

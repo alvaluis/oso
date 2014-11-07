@@ -13,8 +13,8 @@
 void inicializar_jugadores(t_jugadores *js) {
     int i;
 
-    js->num_jugadores = pedir_campo("Numero de jugadores", 2, 6);
-    js->num_humanos = pedir_campo("Numero de jugadores humanos", 0, js->num_jugadores);
+    js->num_jugadores = pedir_entero("Numero de jugadores", 2, 6);
+    js->num_humanos = pedir_entero("Numero de jugadores humanos", 0, js->num_jugadores);
 
     js->turno = 0;
     for (i = 0; i < js->num_jugadores; i++)
