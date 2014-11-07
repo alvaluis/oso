@@ -6,11 +6,11 @@
  * el numero de nanosegundos que se le pasa por parametro
  */
 void duerme(long nanosegundos) {
-	struct timespec tim, tim2;
-	tim.tv_sec = 0;
-	tim.tv_nsec = nanosegundos;
+    struct timespec tim, tim2;
+    tim.tv_sec = 0;
+    tim.tv_nsec = nanosegundos;
 
-	nanosleep(&tim , &tim2);
+    nanosleep(&tim, &tim2);
 }
 
 /*
@@ -18,6 +18,6 @@ void duerme(long nanosegundos) {
  * un numero de nanosegundos predeterminado
  */
 void duerme_un_rato() {
-	duerme(UN_RATO);
+    duerme(UN_RATO);
 }
 

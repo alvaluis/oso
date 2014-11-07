@@ -2,8 +2,6 @@
 #include "colores.h"
 #include "mapa.h"
 
-
-
 /*
  * void inicializar_casillas(t_mapa *mapa);
  * Dado un puntero a mapa con los campos filas y columnas inicializados,
@@ -11,7 +9,7 @@
  * Tambien se inicializan num_casillas y num_casillas_en_blanco.
  */
 void inicializar_casillas(t_mapa *mapa) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -21,7 +19,7 @@ void inicializar_casillas(t_mapa *mapa) {
  * Se asignan a mapa y se llama a inicializar casillas.
  */
 void inicializar_mapa(t_mapa *mapa) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -30,7 +28,7 @@ void inicializar_mapa(t_mapa *mapa) {
  * se imprimen con el color del jugador que las hizo.
  */
 void imprimir_mapa(t_mapa mapa) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -39,7 +37,7 @@ void imprimir_mapa(t_mapa mapa) {
  * y decrementa el contador de casillas en blanco del mapa.
  */
 void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -47,7 +45,7 @@ void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car) {
  * Dado un mapa, fila "f", columna "c" y un caracter "car" = 'O' o 'S';
  * devuelve cuantos OSOs se crearian al escribir el car en fila,columna.
  */
-int calcular_osos(t_mapa *mapa, int f, int c, char car){
-  /* COMPLETAR */
+int calcular_osos(t_mapa *mapa, int f, int c, char car) {
+    /* COMPLETAR */
 }
 

@@ -11,7 +11,7 @@
  * Devuelve el numero de OSOs conseguidos con esa jugada.
  */
 int jugar_humano(t_mapa *mapa, int j) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -22,7 +22,7 @@ int jugar_humano(t_mapa *mapa, int j) {
  * Devuelve el numero de OSOs conseguidos con esa jugada.
  */
 int jugar_maquina(t_mapa *mapa, int j) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -32,14 +32,14 @@ int jugar_maquina(t_mapa *mapa, int j) {
  * Devuelve cierto si el juego se ha acabado. Y sino, falso.
  */
 int se_acabo_el_juego(t_mapa mapa, t_jugadores js) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
  * Imprime el mapa y los contadores de OSOs de cada jugador.
  */
 void imprimir_estado_juego(t_mapa mapa, t_jugadores js) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -50,7 +50,7 @@ void imprimir_estado_juego(t_mapa mapa, t_jugadores js) {
  * - Si no obtuvo ninguno pasa el turno.
  */
 void realizar_jugada(t_mapa *mapa, t_jugadores *js) {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 
 /*
@@ -63,6 +63,6 @@ void realizar_jugada(t_mapa *mapa, t_jugadores *js) {
  */
 
 int main() {
-  /* COMPLETAR */
+    /* COMPLETAR */
 }
 

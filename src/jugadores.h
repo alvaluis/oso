@@ -10,17 +10,17 @@
 #define JUGADOR_HUMANO	1
 
 typedef struct {
-	int	num_osos;
-	int	tipo;	// JUGADOR_MAQUINA o JUGADOR_HUMANO
+    int num_osos;
+    int tipo; // JUGADOR_MAQUINA o JUGADOR_HUMANO
 } t_jugador;
 
 typedef struct {
-	int	num_jugadores;
-	int	num_humanos;
-	int	turno; // Jugador que tiene el turno.
-	t_jugador	j[MAX_JUGADORES];
-	/* En las primeras 'num_humanos' posiciones de 'j' estan los jugadores
-	   de tipo humano y a continuación los de tipo máquina. */
+    int num_jugadores;
+    int num_humanos;
+    int turno; // Jugador que tiene el turno.
+    t_jugador j[MAX_JUGADORES];
+    /* En las primeras 'num_humanos' posiciones de 'j' estan los jugadores
+       de tipo humano y a continuación los de tipo máquina. */
 } t_jugadores;
 
 /*

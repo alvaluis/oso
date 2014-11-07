@@ -14,16 +14,16 @@
 #define CASILLA_VACIA	' '
 
 typedef struct {
-	char	letra;
-	int	jugador;
+    char letra;
+    int jugador;
 } t_casilla;
 
 typedef struct {
-	int	num_filas;
-	int	num_cols;
-	int	num_casillas;
-	int	num_casillas_en_blanco;
-	t_casilla	c[MAX_FILAS][MAX_COLS];
+    int num_filas;
+    int num_cols;
+    int num_casillas;
+    int num_casillas_en_blanco;
+    t_casilla c[MAX_FILAS][MAX_COLS];
 } t_mapa;
 
 
