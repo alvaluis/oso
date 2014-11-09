@@ -69,15 +69,15 @@ void imprimir_mapa(t_mapa mapa) {
 
 /*
  * Dado un mapa, un numero de jugador, fila, columna y un caracter 'O' o 'S';
- * escribe el car en fila,col del mapa para el jugador en turno
+ * escribe el car en la casilla (c,f) del mapa para el jugador en turno
  * y decrementa el contador de casillas en blanco del mapa.
+ *
+ * Precondición: la casilla (c,f) está vacía.
  */
 void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car) {
-    
-    mapa->c[f][c].jugador = j; //Esto no lo tengo muy claro!!
+    mapa->c[f][c].jugador = j;
     mapa->c[f][c].letra = car;
-    mapa->num_casillas_en_blanco --;
-    imprimir_mapa(*mapa);
+    mapa->num_casillas_en_blanco--;
 }
 
 /*

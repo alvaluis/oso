@@ -31,10 +31,7 @@ void inicializar_jugadores(t_jugadores *js) {
  * Dado un puntero a jugadores pasa el turno al siguiente jugador
  */
 void pasar_turno(t_jugadores *js) {
-    if(js->turno >= 0 && js->turno < js->num_jugadores)
-        js->turno ++;
-    
-    else js->turno = 0; //Me puede interesar guardar el numero de turnos que llevan?
+    js->turno = (js->turno + 1) % js->num_jugadores;
 }
 
 /*
@@ -54,10 +51,11 @@ void imprimir_jugador(int j) {
  */
 void imprimir_contadores(t_jugadores js) {
     int i;
-    
+
     printf("OSOs:  ");
-    for(i = 0; i < js.num_jugadores; i++){
-        imprimir_jugador(js.turno);   // No lo tengo muy claro
+    //FIXME: esto hace un "| " innecesario al final, no?
+    for (i = 0; i < js.num_jugadores; i++) {
+        imprimir_jugador(js.turno);
         printf(": %d | ", js.j[i].num_osos);
     }
     printf("\n");
