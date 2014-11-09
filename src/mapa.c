@@ -73,7 +73,11 @@ void imprimir_mapa(t_mapa mapa) {
  * y decrementa el contador de casillas en blanco del mapa.
  */
 void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car) {
-    /* COMPLETAR */
+    
+    mapa->c[f][c].jugador = j; //Esto no lo tengo muy claro!!
+    mapa->c[f][c].letra = car;
+    mapa->num_casillas_en_blanco --;
+    imprimir_mapa(*mapa);
 }
 
 /*

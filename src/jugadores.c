@@ -31,7 +31,10 @@ void inicializar_jugadores(t_jugadores *js) {
  * Dado un puntero a jugadores pasa el turno al siguiente jugador
  */
 void pasar_turno(t_jugadores *js) {
-    /* COMPLETAR */
+    if(js->turno >= 0 && js->turno < js->num_jugadores)
+        js->turno ++;
+    
+    else js->turno = 0; //Me puede interesar guardar el numero de turnos que llevan?
 }
 
 /*
@@ -40,7 +43,9 @@ void pasar_turno(t_jugadores *js) {
  * y resetea el color. (Si j=3 -> imprime "[#3]" en color (3)"BLUE")
  */
 void imprimir_jugador(int j) {
-    /* COMPLETAR */
+    printf_color(j);
+    printf("[#%d]", j);
+    printf_reset_color();
 }
 
 /*
@@ -48,6 +53,13 @@ void imprimir_jugador(int j) {
  * Se escribe el numero de OSOs que ha conseguido cada jugador.
  */
 void imprimir_contadores(t_jugadores js) {
-    /* COMPLETAR */
+    int i;
+    
+    printf("OSOs:  ");
+    for(i = 0; i < js.num_jugadores; i++){
+        imprimir_jugador(js.turno);   // No lo tengo muy claro
+        printf(": %d | ", js.j[i].num_osos);
+    }
+    printf("\n");
 }
 
