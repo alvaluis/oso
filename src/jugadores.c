@@ -53,7 +53,6 @@ void imprimir_contadores(t_jugadores js) {
     int i;
 
     printf("OSOs:  ");
-    //FIXME: esto hace un "| " innecesario al final, no?
     for (i = 0; i < js.num_jugadores; i++) {
         imprimir_jugador(js.turno);
         printf(": %d | ", js.j[i].num_osos);
