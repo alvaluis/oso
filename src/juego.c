@@ -41,7 +41,15 @@ int jugar_humano(t_mapa *mapa, int j) {
  * Devuelve el numero de OSOs conseguidos con esa jugada.
  */
 int jugar_maquina(t_mapa *mapa, int j) {
-    /* COMPLETAR */
+    int f, c;
+
+    for (f = 0; f < mapa->num_filas; f++)
+    for (c = 0; c < mapa->num_cols; c++)
+        if (mapa->c[f][c].letra == CASILLA_VACIA) {
+            escribir_jugada(mapa, j, f, c, 'S');
+            return calcular_osos(mapa, f, c, 'S');
+        }
+    return 0;
 }
 
 /*
