@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include "azar.h"	// para el azar de los jugadores maquina
 #include "duerme.h"	// para que haya pausa entre jugadas de la maquina
 #include "mapa.h"
@@ -11,7 +12,25 @@
  * Devuelve el numero de OSOs conseguidos con esa jugada.
  */
 int jugar_humano(t_mapa *mapa, int j) {
-    /* COMPLETAR */
+    int f,c;
+    char car;
+
+    while(1){
+        printf(" Fila,Columna: ");
+        scanf("%d, %d%*c", &f,&c); //FIXME: debería con y sin espacios
+        if((f >= 0 && f < mapa->num_filas)&&(c >= 0 && c < mapa->num_cols)&&mapa->c[f][c].letra == CASILLA_VACIA)
+            break;
+    }
+
+    while(1){
+        printf("Letra [O/S]: ");
+        scanf("%c%*c", &car);
+        car = toupper(car);
+        if (car == 'O' || car == 'S') break;
+    }
+    
+    escribir_jugada(mapa, j, f, c, car);
+    return calcular_osos(mapa, f, c, car);
 }
 
 /*
@@ -32,14 +51,29 @@ int jugar_maquina(t_mapa *mapa, int j) {
  * Devuelve cierto si el juego se ha acabado. Y sino, falso.
  */
 int se_acabo_el_juego(t_mapa mapa, t_jugadores js) {
-    /* COMPLETAR */
+    int i, max = 0;
+    
+    if(mapa.num_casillas_en_blanco > 0)
+        return 0;
+    printf("JUGADOR/ES GANADOR/ES:");
+    for(i = 0; i < js.num_jugadores; i++){
+        if(js.j[i].num_osos > max) 
+            max = js.j[i].num_osos;
+    }
+    for(i = 0; i < js.num_jugadores; i++){
+        if(js.j[i].num_osos == max) 
+            imprimir_jugador(i);
+    }
+    printf("!\n");
+    return 1;
 }
 
 /*
  * Imprime el mapa y los contadores de OSOs de cada jugador.
  */
 void imprimir_estado_juego(t_mapa mapa, t_jugadores js) {
-    /* COMPLETAR */
+    imprimir_mapa(mapa);
+    imprimir_contadores(js);
 }
 
 /*
@@ -50,7 +84,18 @@ void imprimir_estado_juego(t_mapa mapa, t_jugadores js) {
  * - Si no obtuvo ninguno pasa el turno.
  */
 void realizar_jugada(t_mapa *mapa, t_jugadores *js) {
-    /* COMPLETAR */
+    int osos; 
+    
+    printf("Jugador ");
+    imprimir_jugador(js->turno);
+    if(js->j[js->turno].tipo == JUGADOR_HUMANO)
+        osos = jugar_humano(mapa,js->turno);
+    else 
+        osos = jugar_maquina(mapa,js->turno);
+    
+    js->j[js->turno].num_osos += osos;
+    printf(" %d osos\n", osos);
+    if(osos == 0) pasar_turno(js);
 }
 
 /*
@@ -63,6 +108,18 @@ void realizar_jugada(t_mapa *mapa, t_jugadores *js) {
  */
 
 int main() {
-    /* COMPLETAR */
+    t_jugadores js;
+    t_mapa mapa;
+    
+    inicializar_azar();
+    inicializar_jugadores(&js);
+    inicializar_mapa(&mapa);
+    
+    while(1){
+        imprimir_estado_juego(mapa, js);
+        if(se_acabo_el_juego(mapa, js)) break;
+        realizar_jugada(&mapa, &js);
+    }
+    return 0;
 }
 
