@@ -31,8 +31,8 @@ void inicializar_casillas(t_mapa *mapa) {
  */
 void inicializar_mapa(t_mapa *mapa) {
     printf("Mapa:\n");
-    mapa->num_filas = pedir_entero("Filas", MIN_FILAS, MAX_FILAS);
-    mapa->num_cols = pedir_entero("Columnas", MIN_COLS, MAX_COLS);
+    mapa->num_filas = pedir_entero("\t", "Filas", MIN_FILAS, MAX_FILAS);
+    mapa->num_cols = pedir_entero("\t", "Columnas", MIN_COLS, MAX_COLS);
     inicializar_casillas(mapa);
 }
 
