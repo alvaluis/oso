@@ -54,7 +54,7 @@ void imprimir_contadores(t_jugadores js) {
 
     printf("OSOs:  ");
     for (i = 0; i < js.num_jugadores; i++) {
-        imprimir_jugador(js.turno);
+        imprimir_jugador(i);
         printf(": %d | ", js.j[i].num_osos);
     }
     printf("\n");
