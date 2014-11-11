@@ -83,6 +83,7 @@ int se_acabo_el_juego(t_mapa mapa, t_jugadores js) {
  * Imprime el mapa y los contadores de OSOs de cada jugador.
  */
 void imprimir_estado_juego(t_mapa mapa, t_jugadores js) {
+    printf("\n");
     imprimir_mapa(mapa);
     imprimir_contadores(js);
 }
