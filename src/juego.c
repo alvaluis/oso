@@ -12,21 +12,24 @@
  * Devuelve el numero de OSOs conseguidos con esa jugada.
  */
 int jugar_humano(t_mapa *mapa, int j) {
-    int f,c;
+    int f, c, r;
     char car;
 
     while(1){
         printf(" Fila,Columna: ");
-        scanf("%d, %d%*c", &f,&c); //FIXME: debería con y sin espacios
-        if((f >= 0 && f < mapa->num_filas)&&(c >= 0 && c < mapa->num_cols)&&mapa->c[f][c].letra == CASILLA_VACIA)
+        r = scanf("%d,%d%*c", &f,&c); //FIXME 
+        if((r == 2)&&
+           (f >= 0 && f < mapa->num_filas)&&
+           (c >= 0 && c < mapa->num_cols)&&
+           (mapa->c[f][c].letra == CASILLA_VACIA))
             break;
     }
 
     while(1){
         printf("Letra [O/S]: ");
-        scanf("%c%*c", &car);
+        r = scanf("%c%*c", &car);
         car = toupper(car);
-        if (car == 'O' || car == 'S') break;
+        if ((r == 1)&&(car == 'O' || car == 'S')) break;
     }
     
     escribir_jugada(mapa, j, f, c, car);
