@@ -17,7 +17,9 @@ int jugar_humano(t_mapa *mapa, int j) {
 
     while (1) {
         printf(" Fila,Columna: ");
-        r = scanf("%d,%d%*c", &f,&c); //FIXME 
+        r = scanf("%d,%d", &f,&c);
+        scanf("%*[^\n]%*c");
+
         if ((r == 2)&&
             (f >= 0 && f < mapa->num_filas)&&
             (c >= 0 && c < mapa->num_cols)&&
@@ -27,9 +29,11 @@ int jugar_humano(t_mapa *mapa, int j) {
 
     while (1) {
         printf("Letra [O/S]: ");
-        r = scanf("%c%*c", &car);
+        scanf("%c", &car);
+        scanf("%*[^\n]%*c");
+
         car = toupper(car);
-        if ((r == 1)&&(car == 'O' || car == 'S')) break;
+        if (car == 'O' || car == 'S') break;
     }
 
     escribir_jugada(mapa, j, f, c, car);

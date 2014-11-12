@@ -9,7 +9,9 @@ int pedir_entero(const char *prefijo, const char *nombre, int min, int max) {
     int n, r;
     while (1) {
         printf("%s%s (%d-%d): ", prefijo, nombre, min, max);
-        r = scanf("%d%*c", &n);
+        r = scanf("%d", &n);
+        scanf("%*[^\n]%*c");
+
         if (r == 1 && n >= min && n <= max)
             return n;
         else
