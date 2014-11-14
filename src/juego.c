@@ -4,6 +4,7 @@
 #include "duerme.h"	// para que haya pausa entre jugadas de la maquina
 #include "mapa.h"
 #include "jugadores.h"
+#include "intel.h"
 
 /*
  * Dado un mapa, un numero de jugador;
@@ -48,15 +49,12 @@ int jugar_humano(t_mapa *mapa, int j) {
  * Devuelve el numero de OSOs conseguidos con esa jugada.
  */
 int jugar_maquina(t_mapa *mapa, int j) {
-    int f, c;
-
-    for (f = 0; f < mapa->num_filas; f++)
-    for (c = 0; c < mapa->num_cols; c++)
-        if (mapa->c[f][c].letra == CASILLA_VACIA) {
-            escribir_jugada(mapa, j, f, c, 'S');
-            return calcular_osos(mapa, f, c, 'S');
-        }
-    return 0;
+    t_jugada jugada;
+    
+    determinar_jugada(mapa, NULL, &jugada);
+    escribir_jugada(mapa, j, jugada.f, jugada.c, jugada.car);
+    //duerme_un_rato(); //FIXME
+    return calcular_osos(mapa, jugada.f, jugada.c, jugada.car);
 }
 
 /*
