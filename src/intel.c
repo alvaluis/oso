@@ -45,6 +45,6 @@ void determinar_jugada(t_mapa *mapa,  t_jugadores *jugadores, t_jugada *jugada){
 }
     
 float calcular_score (t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada){
-    return 0;
+    return calcular_osos(mapa, jugada->f,jugada->c, jugada->car);
 }
         

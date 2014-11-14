@@ -10,6 +10,7 @@ add_executable (
   src/colores.c
   src/duerme.c
   src/input.c
+  src/intel.c
   src/jugadores.c
   src/mapa.c
 )
