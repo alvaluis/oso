@@ -41,7 +41,7 @@ void determinar_jugada(t_mapa *mapa,  t_jugadores *jugadores, t_jugada *jugada){
         }
     }
     //TODO (cantonades i evitar posar O's)
-    *jugada = jugadas2[numero_al_azar(i2-1)];
+    *jugada = jugadas2[indice_al_azar(i2)];
 }
     
 float calcular_score (t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada){

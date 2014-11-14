@@ -23,3 +23,10 @@ int numero_al_azar(int max) {
     return (rand() % max) + 1;
 }
 
+/*
+ * devuelve el indice de un elemento aleatorio de una lista de tamaño 
+ */
+int indice_al_azar(int cantidad) {
+    return rand() % cantidad;
+}
+
