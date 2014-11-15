@@ -4,8 +4,9 @@
 #include "azar.h"
 
 /*
- * inicializar_azar() se tiene que ejecutar una vez al principio del main
- * para inicializar la generación de números aleatorios
+ * void inicializar_azar();
+ * Se tiene que ejecutar una vez al principio del programa
+ * para inicializar la generación de números aleatorios.
  */
 void inicializar_azar() {
     /*
@@ -17,14 +18,16 @@ void inicializar_azar() {
 }
 
 /*
- * numero_al_azar(max) devuelve un número entero al azar entre 1 y max
+ * int numero_al_azar(int max);
+ * Devuelve un número entero al azar entre [1, max].
  */
 int numero_al_azar(int max) {
     return (rand() % max) + 1;
 }
 
 /*
- * devuelve el indice de un elemento aleatorio de una lista de tamaño 
+ * int indice_al_azar(int cantidad);
+ * Devuelve un índice aleatorio, es decir, un entero entre [0, cantidad).
  */
 int indice_al_azar(int cantidad) {
     return rand() % cantidad;

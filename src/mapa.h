@@ -48,9 +48,12 @@ void inicializar_mapa(t_mapa *mapa);
 void imprimir_mapa(t_mapa mapa);
 
 /*
+ * void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car);
  * Dado un mapa, un numero de jugador, fila, columna y un caracter 'O' o 'S';
- * escribe el car en fila,col del mapa para el jugador en turno
+ * escribe el car en la casilla (c,f) del mapa para el jugador en turno
  * y decrementa el contador de casillas en blanco del mapa.
+ *
+ * Precondición: la casilla (c,f) está vacía.
  */
 void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car);
 
@@ -61,9 +64,11 @@ void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car);
  */
 int calcular_osos(t_mapa *mapa, int f, int c, char car);
 
-/**
- * Comprueba si se crearía un OSO, en la dirección marcada por dc y df, al poner
- * el caracter car en la casilla (c,f).
+/*
+ * int hay_un_oso(t_mapa *mapa, int c, int f, int dc, int df, char car);
+ * Comprueba si se crearía un OSO, en la dirección marcada por dc y df,
+ * al poner el caracter car en la casilla (c,f).
+ *
  * @param mapa el mapa
  * @param c la columna de la casilla donde se pone car
  * @param f la fila de la casilla donde se pone car
@@ -71,7 +76,7 @@ int calcular_osos(t_mapa *mapa, int f, int c, char car);
  * @param df dirección vertical en la que miramos si hay un OSO
  * @param car la letra que pondríamos en la casilla
  * @return 1 si se crea OSO, 0 en cualquier otro caso
- **/
+ */
 int hay_un_oso(t_mapa *mapa, int c, int f, int dc, int df, char car);
 
 #endif /* MAPA_H */

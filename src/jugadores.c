@@ -35,6 +35,7 @@ void pasar_turno(t_jugadores *js) {
 }
 
 /*
+ * void imprimir_jugador(int j);
  * Dado un entero 'j' (correspondiente al jugador numero 'j',
  * imprime en el color 'j' la cadena de caracteres "[#j]"
  * y resetea el color. (Si j=3 -> imprime "[#3]" en color (3)"BLUE")

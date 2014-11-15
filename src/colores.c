@@ -2,8 +2,18 @@
 #include "colores.h"
 
 /*
- * Dado un color -1Default 0Red 1Green 2Yellow 3Blue 4Magenta 5Cyan
- * Hace que el terminal a partir de ahora escriba en ese color
+ * void printf_color(int color);
+ * Dado un color:
+ *
+ *   -1: Reset
+ *    0: Rojo
+ *    1: Verde
+ *    2: Amarillo
+ *    3: Azul
+ *    4: Magenta
+ *    5: Cyan
+ *
+ * Hace que el terminal a partir de ahora escriba en ese color.
  */
 void printf_color(int color) {
     switch (color) {
@@ -18,7 +28,8 @@ void printf_color(int color) {
 }
 
 /*
- * Hace que el terminal a partir de ahora escriba en el color por defecto
+ * void printf_reset_color();
+ * Hace que el terminal a partir de ahora escriba en el color por defecto.
  */
 void printf_reset_color() {
     printf_color(-1);

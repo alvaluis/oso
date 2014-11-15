@@ -2,6 +2,7 @@
 #include "duerme.h"
 
 /*
+ * void duerme(long nanosegundos);
  * Hace que la ejecucion del programa se detenga durante
  * el numero de nanosegundos que se le pasa por parametro
  */
@@ -14,6 +15,7 @@ void duerme(long nanosegundos) {
 }
 
 /*
+ * void duerme_un_rato();
  * Hace que la ejecucion del programa se detenga durante
  * un numero de nanosegundos predeterminado
  */
