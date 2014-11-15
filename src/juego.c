@@ -5,6 +5,7 @@
 #include "mapa.h"
 #include "jugadores.h"
 #include "intel.h"
+#include "input.h"
 
 /*
  * Dado un mapa, un numero de jugador;
@@ -19,7 +20,7 @@ int jugar_humano(t_mapa *mapa, int j) {
     while (1) {
         printf(" Fila,Columna: ");
         r = scanf("%d,%d", &f,&c);
-        scanf("%*[^\n]%*c");
+        descartar_linea();
 
         if ((r == 2)&&
             (f >= 0 && f < mapa->num_filas)&&
@@ -31,7 +32,7 @@ int jugar_humano(t_mapa *mapa, int j) {
     while (1) {
         printf("Letra [O/S]: ");
         scanf("%c", &car);
-        scanf("%*[^\n]%*c");
+        descartar_linea();
 
         car = toupper(car);
         if (car == 'O' || car == 'S') break;
