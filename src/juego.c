@@ -50,7 +50,7 @@ int jugar_humano(t_mapa *mapa, int j) {
  */
 int jugar_maquina(t_mapa *mapa, int j) {
     t_jugada jugada;
-    
+
     determinar_jugada(mapa, NULL, &jugada);
     escribir_jugada(mapa, j, jugada.f, jugada.c, jugada.car);
     //duerme_un_rato(); //FIXME
