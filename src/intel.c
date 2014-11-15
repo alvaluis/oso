@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "intel.h"
-#include "mapa.h"
 #include "azar.h"
 
 void jugadas_validas(t_mapa *mapa, t_jugada *jugadas, int *num_jugadas) {

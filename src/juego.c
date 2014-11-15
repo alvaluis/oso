@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
-#include "azar.h"	// para el azar de los jugadores maquina
-#include "duerme.h"	// para que haya pausa entre jugadas de la maquina
+#include "azar.h"
+#include "duerme.h"
 #include "mapa.h"
 #include "jugadores.h"
 #include "intel.h"

@@ -1,6 +1,6 @@
-#include <time.h>	// time()
-#include <stdlib.h>	// rand(), srand()
-#include <stdio.h>	// printf()
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "azar.h"
 
 /*

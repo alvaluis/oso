@@ -4,7 +4,6 @@
 #define MIN_JUGADORES	2
 #define MAX_JUGADORES	6
 #define MIN_HUMANOS	0
-#define MAX_HUMANOS	MAX_JUGADORES
 
 typedef enum {
     JUGADOR_MAQUINA,
