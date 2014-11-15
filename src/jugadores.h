@@ -26,16 +26,16 @@ typedef struct {
 
 /*
  * void inicializar_jugadores(t_jugadores *js);
- * Dado un puntero a jugadores los inicializa pidiendo al usuario el numero
+ * Dado un puntero a jugadores los inicializa pidiendo al usuario el número
  * de jugadores y el de jugadores humanos, assegurandose que ambos estan
- * entre el numero de jugadores minimo y maximo permitidos.
- * E inicializa el turno al primer jugador.
+ * entre el número de jugadores mínimo y máximo permitidos.
+ * Tambien inicializa el turno al primer jugador.
  */
 void inicializar_jugadores(t_jugadores *js);
 
 /*
  * void pasar_turno(t_jugadores *js);
- * Dado un puntero a jugadores pasa el turno al siguiente jugador
+ * Dado un puntero a jugadores pasa el turno al siguiente jugador.
  */
 void pasar_turno(t_jugadores *js);
 

@@ -27,7 +27,7 @@ typedef struct {
 /*
  * void inicializar_casillas(t_mapa *mapa);
  * Dado un puntero a mapa con los campos filas y columnas inicializados,
- * se inicializa todas sus casillas a CASILLA_VACIA y NINGUN_JUGADOR.
+ * se inicializa todas sus casillas a CASILLA_VACIA y NINGUN_JUGADOR. FIXME
  * Tambien se inicializan num_casillas y num_casillas_en_blanco.
  */
 void inicializar_casillas(t_mapa *mapa);
@@ -60,7 +60,7 @@ void escribir_jugada(t_mapa *mapa, int j, int f, int c, char car);
 /*
  * int calcular_osos(t_mapa *mapa, int f, int c, char car);
  * Dado un mapa, fila "f", columna "c" y un caracter "car" = 'O' o 'S';
- * devuelve cuantos OSOs se crearian al escribir el car en fila,columna.
+ * devuelve cuantos OSOs se crearían al escribir car en (c,f).
  */
 int calcular_osos(t_mapa *mapa, int f, int c, char car);
 

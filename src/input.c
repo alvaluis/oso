@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include "input.h"
 
-/*
- * int pedir_entero(const char *prefijo, const char *nombre, int min, int max);
- * Pide un entero al usuario, hasta que este introduce
- * un valor válido (entre min y max).
- */
 int pedir_entero(const char *prefijo, const char *nombre, int min, int max) {
     int n, r;
     while (1) {
