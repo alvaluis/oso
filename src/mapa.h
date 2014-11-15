@@ -7,7 +7,7 @@
 #define MAX_COLS	35
 
 #define NINGUN_JUGADOR	-1
-// No puede ser 0 porque se pensaria que esta escrita por el jugador 0
+// No puede ser 0 porque se pensaria que esta escrita por el jugador 0 FIXME
 #define CASILLA_VACIA	' '
 
 typedef struct {
