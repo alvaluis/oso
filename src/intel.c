@@ -33,10 +33,13 @@ void determinar_jugada(t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada) {
     filtrar_maximo_score(mapa, jugadores, &lista1, &lista2);
 
     /* Filtros adicionales */
-    //TODO (cantonades i evitar posar O's)
+    filtrar_adicional(mapa, &lista2, &lista1);
 
     /* De todas las filtradas, retornar una jugada aleatoria */
-    *jugada = lista2.jugadas[indice_al_azar(lista2.num)];
+    if (lista1.num == 0)
+        *jugada = lista2.jugadas[indice_al_azar(lista2.num)];
+    else
+        *jugada = lista1.jugadas[indice_al_azar(lista1.num)]; //FIXME
 }
 
 void filtrar_maximo_score(t_mapa *mapa, t_jugadores *jugadores, t_lista_jugadas *src, t_lista_jugadas *dst) {
@@ -82,3 +85,16 @@ float calcular_score(t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada) {
     return -max_osos;
 }
 
+void filtrar_adicional(t_mapa *mapa, t_lista_jugadas *src, t_lista_jugadas *dst) {
+    int i;
+    t_jugada *jugada;
+    dst->num = 0;
+    
+    for (i = 0; i < src->num; i++){
+        jugada = &src->jugadas[i];
+        if (jugada->car == 'O') continue;
+        if (jugada->f == 0 || jugada->f == MAX_FILAS-1 || jugada->c == 0 || jugada->c == MAX_COLS-1) continue;
+        dst->jugadas[dst->num] = *jugada;
+        dst->num ++;
+    }
+}
