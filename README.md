@@ -23,3 +23,4 @@ Lista de mejoras respecto del juego original:
  - La entrada de datos no tolera letras ni entra en bucle infinito.
  - La entrada de datos ignora (descarta) parametros sobrantes al final de la línea.
  - Mejoras en Inteligencia Artificial.
+ - La inteligencia artificial acepta puntero a `t_jugadores`, para tener más información del contexto.

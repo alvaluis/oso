@@ -49,10 +49,10 @@ int jugar_humano(t_mapa *mapa, int j) {
  * Realiza la jugada seleccionada y duerme un rato.
  * Devuelve el numero de OSOs conseguidos con esa jugada.
  */
-int jugar_maquina(t_mapa *mapa, int j) {
+int jugar_maquina(t_mapa *mapa, t_jugadores *js, int j) {
     t_jugada jugada;
 
-    determinar_jugada(mapa, NULL, &jugada); //FIXME
+    determinar_jugada(mapa, js, &jugada);
     escribir_jugada(mapa, j, jugada.f, jugada.c, jugada.car);
     //duerme_un_rato(); //FIXME
     return calcular_osos(mapa, jugada.f, jugada.c, jugada.car);
@@ -103,9 +103,9 @@ void realizar_jugada(t_mapa *mapa, t_jugadores *js) {
     printf("Jugador ");
     imprimir_jugador(js->turno);
     if (js->j[js->turno].tipo == JUGADOR_HUMANO)
-        osos = jugar_humano(mapa,js->turno);
+        osos = jugar_humano(mapa, js->turno);
     else
-        osos = jugar_maquina(mapa,js->turno);
+        osos = jugar_maquina(mapa, js, js->turno);
 
     js->j[js->turno].num_osos += osos;
     printf(" %d osos\n", osos);
