@@ -4,17 +4,14 @@
 #include "input.h"
 
 void inicializar_casillas(t_mapa *mapa) {
-    int i, j;
+    int f, c;
 
     mapa->num_casillas = mapa->num_filas * mapa->num_cols;
     mapa->num_casillas_en_blanco = mapa->num_filas * mapa->num_cols;
 
-    for (i = 0; i <= mapa->num_filas; i++) {
-        for (j = 0; j <= mapa->num_cols; j++) {
-            mapa->c[i][j].letra = CASILLA_VACIA;
-            mapa->c[i][j].jugador = NINGUN_JUGADOR;
-        }
-    }
+    for (f = 0; f <= mapa->num_filas; f++)
+    for (c = 0; c <= mapa->num_cols; c++)
+        mapa->c[f][c].letra = CASILLA_VACIA;
 }
 
 void inicializar_mapa(t_mapa *mapa) {
@@ -42,7 +39,8 @@ void imprimir_mapa(t_mapa mapa) {
         printf("%02d|", i);
         for (j = 0; j < mapa.num_cols; j++) {
             casilla = mapa.c[i][j];
-            printf_color(casilla.jugador);
+            if (casilla.letra != CASILLA_VACIA)
+                printf_color(casilla.jugador);
             printf("%c\033[m|", casilla.letra);
         }
         printf("\n");
