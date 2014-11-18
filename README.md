@@ -15,3 +15,11 @@ Y luego, se compila:
     $ make
 
 Una vez hecho esto, se puede ejecutar el juego con `./juego`.
+
+## Mejoras
+
+Lista de mejoras respecto del juego original:
+
+ - La entrada de datos no tolera letras ni entra en bucle infinito.
+ - La entrada de datos ignora (descarta) parametros sobrantes al final de la línea.
+ - Mejoras en Inteligencia Artificial.
