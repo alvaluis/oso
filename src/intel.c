@@ -65,11 +65,11 @@ void filtrar_maximo_score(t_mapa *mapa, t_jugadores *jugadores, t_lista_jugadas 
 }
 
 float calcular_score(t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada) {
-    int f,c, max_osos = 0;
+    int f, c, max_osos = 0;
     t_mapa mapa2;
     int osos = calcular_osos(mapa, jugada->f, jugada->c, jugada->car);
     if (osos > 0) return osos;
-    
+
     mapa2 = *mapa;
     escribir_jugada(&mapa2, jugadores->turno, jugada->f, jugada->c, jugada->car);
     for (f = 0; f < mapa->num_filas; f++)
@@ -77,11 +77,11 @@ float calcular_score(t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada) {
         if (mapa->c[f][c].letra == CASILLA_VACIA) {
             osos = calcular_osos(&mapa2, f, c, 'O');
             if (osos > max_osos) max_osos = osos;
-            
+
             osos = calcular_osos(&mapa2, f, c, 'S');
             if (osos > max_osos) max_osos = osos;
         }
-    
+
     return -max_osos;
 }
 
@@ -89,12 +89,12 @@ void filtrar_adicional(t_mapa *mapa, t_lista_jugadas *src, t_lista_jugadas *dst)
     int i;
     t_jugada *jugada;
     dst->num = 0;
-    
-    for (i = 0; i < src->num; i++){
+
+    for (i = 0; i < src->num; i++) {
         jugada = &src->jugadas[i];
         if (jugada->car == 'O') continue;
         if (jugada->f == 0 || jugada->f == MAX_FILAS-1 || jugada->c == 0 || jugada->c == MAX_COLS-1) continue;
         dst->jugadas[dst->num] = *jugada;
-        dst->num ++;
+        dst->num++;
     }
 }

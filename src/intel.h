@@ -47,6 +47,12 @@ void filtrar_maximo_score(t_mapa *mapa, t_jugadores *jugadores, t_lista_jugadas 
  */
 float calcular_score(t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada);
 
+/*
+ * void filtrar_adicional(t_mapa *mapa, t_lista_jugadas *src, t_lista_jugadas *dst);
+ * Filtra las jugadas en src, eliminando aquellas que ponen en las esquinas
+ * del tablero, así como aquellas que consisten en poner una O.
+ * Deja el resultado en dst (que puede ser una lista vacía).
+ */
 void filtrar_adicional(t_mapa *mapa, t_lista_jugadas *src, t_lista_jugadas *dst);
 
 #endif /* INTEL_H */
