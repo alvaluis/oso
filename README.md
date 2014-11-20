@@ -25,4 +25,4 @@ Lista de mejoras respecto del juego original:
  - Prescindir de la constante `NINGUN_JUGADOR`.
  - Mejoras en Inteligencia Artificial.
  - La inteligencia artificial acepta puntero a `t_jugadores`, para tener más información del contexto.
-
+ - El azar se inicializa de forma más precisa, para que varie con más frecuencia.
