@@ -93,7 +93,7 @@ void filtrar_adicional(t_mapa *mapa, t_lista_jugadas *src, t_lista_jugadas *dst)
     for (i = 0; i < src->num; i++) {
         jugada = &src->jugadas[i];
         if (jugada->car == 'O') continue;
-        if (jugada->f == 0 || jugada->f == MAX_FILAS-1 || jugada->c == 0 || jugada->c == MAX_COLS-1) continue;
+        if (jugada->f == 0 || jugada->f == mapa->num_filas-1 || jugada->c == 0 || jugada->c == mapa->num_cols-1) continue;
         dst->jugadas[dst->num] = *jugada;
         dst->num++;
     }
