@@ -21,7 +21,7 @@ Una vez hecho esto, se puede ejecutar el juego con `./juego`.
 Lista de mejoras respecto del juego original:
 
  - En el momento de introducir fila y columna, pueden usarse las flechas para escoger la casilla.
-   Una vez hecho esto, presionar immediatamente la letra que se desea poner y se hace la jugada.
+   Cuando se tiene el cursor sobre la casilla, presionar immediatamente la letra y se hace la jugada.
  - La entrada de datos no tolera letras ni entra en bucle infinito.
  - La entrada de datos ignora (descarta) parametros sobrantes al final de la línea.
  - Prescindir de la constante `NINGUN_JUGADOR`.
