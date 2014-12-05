@@ -210,7 +210,7 @@ int jugar_maquina(t_mapa *mapa, t_jugadores *js, int j) {
 
     determinar_jugada(mapa, js, &jugada);
     escribir_jugada(mapa, j, jugada.f, jugada.c, jugada.car);
-    //duerme_un_rato(); //FIXME
+    duerme_un_rato();
     return calcular_osos(mapa, jugada.f, jugada.c, jugada.car);
 }
 

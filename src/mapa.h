@@ -25,7 +25,7 @@ typedef struct {
 /*
  * void inicializar_casillas(t_mapa *mapa);
  * Dado un puntero a mapa con los campos filas y columnas inicializados,
- * se inicializa todas sus casillas a CASILLA_VACIA y NINGUN_JUGADOR. FIXME
+ * se inicializa todas sus casillas a CASILLA_VACIA.
  * Tambien se inicializan num_casillas y num_casillas_en_blanco.
  */
 void inicializar_casillas(t_mapa *mapa);

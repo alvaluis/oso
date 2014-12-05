@@ -39,7 +39,7 @@ void determinar_jugada(t_mapa *mapa, t_jugadores *jugadores, t_jugada *jugada) {
     if (lista1.num == 0)
         *jugada = lista2.jugadas[indice_al_azar(lista2.num)];
     else
-        *jugada = lista1.jugadas[indice_al_azar(lista1.num)]; //FIXME
+        *jugada = lista1.jugadas[indice_al_azar(lista1.num)];
 }
 
 void filtrar_maximo_score(t_mapa *mapa, t_jugadores *jugadores, t_lista_jugadas *src, t_lista_jugadas *dst) {
