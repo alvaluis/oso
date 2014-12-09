@@ -9,8 +9,8 @@ void inicializar_casillas(t_mapa *mapa) {
     mapa->num_casillas = mapa->num_filas * mapa->num_cols;
     mapa->num_casillas_en_blanco = mapa->num_filas * mapa->num_cols;
 
-    for (f = 0; f <= mapa->num_filas; f++)
-    for (c = 0; c <= mapa->num_cols; c++)
+    for (f = 0; f < mapa->num_filas; f++)
+    for (c = 0; c < mapa->num_cols; c++)
         mapa->c[f][c].letra = CASILLA_VACIA;
 }
 
